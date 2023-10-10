@@ -6,6 +6,7 @@ const { json } = pkg;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const ipAddress = "192.168.63.142"
 
 app.use(cors()); // Menambahkan middleware CORS
 
@@ -23,6 +24,6 @@ app.get('/api/wifi/networks', async (_req, res) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, ipAddress, () => {
   console.log(`Server berjalan di port ${PORT}`);
 });
