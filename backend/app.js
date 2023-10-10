@@ -6,7 +6,7 @@ const { json } = pkg;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const ipAddress = "192.168.63.142"
+const ipAddress = "0.0.0.0"
 
 app.use(cors()); // Menambahkan middleware CORS
 
